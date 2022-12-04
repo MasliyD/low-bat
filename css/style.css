@@ -1,0 +1,395 @@
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:16px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a{color:inherit;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+
+@font-face {
+    font-family: Tahoma;
+    src: url('../fonts/Tahoma_woff2/Tahoma.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Tahoma;
+    src: url('../fonts/Tahoma_woff2/Tahoma-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: 20px;
+    line-height: 1.2;
+    background-image: url('../img/bg/bg_desktop.png');
+    background-size: 100% 100%;
+    max-height: 900px;
+}
+
+.main {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+}
+
+.modal {
+    margin: 225px auto auto; /* 25vh */
+    background: #fff;
+    width: 348px;
+    border-radius: 20px;
+    padding: 29px 27px;
+}
+
+.modal__title {
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.modal__images {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-left: 65px;
+}
+
+.modal__text {
+    font-size: 18px;
+    margin-bottom: 39px;
+}
+
+.modal__form {
+    margin-top: 29px;
+}
+
+.modal__common {
+    border-radius: 25px;
+    height: 46px;
+    width: 294px;
+}
+
+.modal__input {
+    border: 1px solid #3B82F7;
+    color: #757575;
+    font-size: 20px;
+    text-align: center;
+}
+
+.modal__error {
+    visibility: hidden;
+    font-size: 10px;
+    color: #FA0101;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__btn {
+    text-transform: uppercase;
+    background: #3B82F7;
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+}
+
+/* .modal__btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    border-radius: 25px;
+    left: 0;
+    top: 0;
+    transition: opacity 0.6s;
+    
+    opacity: 0;
+} */
+
+/* .modal__btn:hover::after {
+    opacity: 1;
+} */
+
+.modal__btn:not([disabled]):hover {
+    background: #2f68c6;
+}
+
+.modal__btn:not([disabled]):active {
+    background: #234e94;
+}
+
+/* disabled */
+
+.modal__input:disabled {
+    border: 1px solid rgba(189, 190, 191, 1);
+}
+
+.modal__btn:disabled {
+    background: rgba(189, 190, 191, 1);
+}
+
+/* footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 1152px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer__content {
+    height: 34px;
+    font-size: 11px;
+    text-align: justify;
+    -ms-overflow-style: none; /* Internet Explorer, Edge */
+    scrollbar-width: none; /* Firefox */
+    overflow-y: scroll; 
+}
+
+.footer__content::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+/* laptop */
+@media (max-width: 1280px) and (min-height: 600px) {
+    .modal {
+        margin: 92px auto auto; /* 15.33vh */
+    }
+
+    .footer {
+        max-width: 738px;
+    }
+}
+
+/* tablet */
+@media (max-width: 768px) and (min-height: 1000px) {
+    body {
+        background-image: url('../img/bg/bg_tablet.png');
+    }
+
+    .modal {
+        margin: 222px auto auto; /* 21.7vh 8 */
+    }
+}
+
+/* Mobile 414px iphone 8 plus*/
+@media (max-width: 414px) and (min-height: 735px) {
+    body {
+        background-image: url('../img/bg/bg_iphone\ 8\ plus.png');
+    }
+
+    .modal {
+        margin: 98px auto auto; /* 13.31vh */
+        width: 348px;
+        height: auto;
+        padding: 29px 27px;
+    }
+
+    .footer {
+        max-width: 384px;
+    }
+}
+
+/* Mobile 414px iphone 11*/
+@media (max-width: 414px) and (min-height: 895px) {
+    body {
+        background-image: url('../img/bg/bg_iphone\ 11.png');
+    }
+
+    .modal {
+        margin: 140px auto auto; /* 13.31vh */
+        width: 348px;
+        height: auto;
+        padding: 29px 27px;
+    }
+}
+
+/* Mobile 375px iphone 8 */
+@media (max-width: 376px) and (min-height: 667px) {
+    body {
+        background-image: url('../img/bg/bg_iphone\ 8.png');
+    }
+
+    .modal {
+        margin: 82px auto auto; /* 18.35vh */
+        width: 328px;
+        padding: 24px 28px;
+    }
+
+    .modal__title {
+        font-size: 18px;
+        margin-bottom: 21px;
+    }
+
+    .modal__text {
+        font-size: 16px;
+        margin-bottom: 26px;
+    }
+
+    .modal__images {
+        gap: 26px;
+    }
+
+    .modal__usb {
+        max-width: 55px;
+    }
+
+    .modal__bat {
+        max-height: 72px;
+    }
+
+    .modal__form {
+        margin-top: 25px;
+    }
+
+    .modal__common {
+        width: 272px;
+    }
+
+    .footer {
+        max-width: 356px;
+    }
+}
+
+/* Mobile 375px iphone X */
+@media (max-width: 376px) and (min-height: 811px) {
+    body {
+        background-image: url('../img/bg/bg_iphone\ x.png');
+    }
+
+    .modal {
+        margin: 149px auto auto;
+    }
+}
+
+/* iphone SE */
+@media (max-width: 320px) and (min-height: 568px) {
+    body {
+        background-image: url('../img/bg/bg_iphone\ SE.png');
+    }
+
+    .modal {
+        margin: 50px auto auto;
+        width: 273px;
+        height: 328px;
+        padding: 20px 23px;
+    }
+
+    .modal__title {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+
+    .modal__text {
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+
+    .modal__images {
+        gap: 22px;
+    }
+
+    .modal__usb {
+        max-width: 46px;
+    }
+
+    .modal__bat {
+        max-height: 60px;
+    }
+
+    .modal__form {
+        margin-top: 29px;
+    }
+
+    .modal__common {
+        width: 227px;
+        height: 39px;
+    }
+
+    .footer {
+        max-width: 300px;
+    }
+}
+
+/* iphone 8 horiz */
+@media (max-width: 668px) and (max-height: 376px) {
+    body {
+        background-image: url('../img/bg/bg_iphone\ 8\ horiz.png');
+    }
+
+    .modal {
+        margin: 28px auto auto;
+        width: 545px;
+        padding: 27px 30px 30px;
+    }
+
+    .modal__inner {
+        display: flex;
+        gap: 37px;
+    }
+
+    .modal__wrapper-text {
+        margin-top: 48px;
+    }
+
+    .modal__title,
+    .modal__text {
+        font-size: 16px;
+    }
+
+    .modal__common {
+        width: 227px;
+        height: 39px;
+    }
+
+    .modal__images {
+        margin-left: 53px;
+    }
+
+    .modal__usb {
+        max-width: 46px;
+    }
+
+    .modal__bat {
+        max-height: 60px;
+    }
+
+    .modal__input {
+        font-size: 18px;
+    }
+
+    .modal__btn {
+        font-size: 18px;
+    }
+
+    .footer {
+        max-width: 647px;
+    }
+}
+
+/* iphone SE horiz */
+@media (max-width: 569px) and (max-height: 321px) {
+    body {
+        background-image: url('../img/bg/bg_iphone\ SE\ horiz.png');
+    }
+
+    .modal {
+        margin: 10px auto auto;
+        width: 545px;
+        padding: 15px 24px;
+    }
+}
